@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR code Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <div class="contain">
+            <h1 id="QR">QR CODE GENERATOR</h1>
+            <p>Enter your text or URL</p>
+            <input type="text" placeholder="TEXT or URL" id="qrtext">
+            <div id="divimg">
+                <img src=""  id="qrimg">
+            </div>
+            <button onclick="QRGENERATOR()">Generate QR code</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Sudhanshu Singh. All rights reserved.</p>
+    </footer>
+    <script>
+        let QR=document.getElementById("QR");
+        let qrimg=document.getElementById("qrimg");
+        let qrtext=document.getElementById("qrtext");
+        function QRGENERATOR(){
+            if(qrtext.value!=""){
+                qrimg.src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+qrtext.value;
+        
+            }
+            else{
+                alert("Please enter some text or URL");
+            } 
+        }
+
+    </script>
+   
+</body>
+</html>
