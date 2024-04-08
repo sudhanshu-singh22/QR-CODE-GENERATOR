@@ -58,3 +58,25 @@ footer {
     
 } 
 
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+    .contain {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .contain p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contain {
+        width: 95%;
+    }
+
+    .contain p {
+        font-size: 13px;
+    }
+}
