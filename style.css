@@ -1,82 +1,148 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
-}
-body{
-    background-image:url(black-1072366_1280.jpg);
-    background-size: cover;
-}
-.contain{
-    margin: 10px;
-    padding: 25px 35px;
-    position: absolute;
-    background-color: rgb(245, 235, 212);
-    width: 500px;
-    border-radius: 10px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% ,-50%);
-    border: 2px solid rgb(132, 161, 235);
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-.contain p{
+
+/* Common styles for both mobile and larger screens */
+body {
+    background-image: url(black-1072366_1280.jpg);
+    background-size: cover;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+.contain {
+    background-color: rgb(245, 235, 212);
+    padding: 25px 35px;
+    border-radius: 10px;
+    border: 2px solid rgb(132, 161, 235);
+}
+
+.contain p {
     font-weight: 600;
     font-size: 15px;
-    margin: 8px;
+    margin: 8px 0;
 }
-.contain input{
-    width: 100%;
+
+.contain input, .contain button {
+    width: calc(100% - 20px); 
     height: 50px;
     border: 1px solid black;
     outline: 0;
     padding: 10px;
-    margin: 10px 0px 20px;
+    margin: 10px 0 20px;
     border-radius: 5px;
+}
 
+.contain button {
+    background-color: rgb(132, 161, 235);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-.contain button{
-    border-radius: 10px;
-    margin: 10px;
-    padding: 10px;
+
+.contain button:hover {
+    background-color: rgb(100, 130, 200);
 }
-#QR{
+
+#QR {
     text-align: center;
     color: rgb(80, 176, 228);
-    text-shadow: 2px;
-    height: 50px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    margin-top: 20px;
 }
+
 footer {
-    background-color: #f4f4f4; 
+    background-color: #f4f4f4;
     color: #333;
-    text-align: center; 
-    padding: 20px 0; 
-    position: fixed; 
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
     width: 100%;
-    bottom: 0; 
-    
-} 
+    bottom: 0;
+}
 
 /* Media queries for responsiveness */
 
 @media (max-width: 768px) {
     .contain {
-        width: 90%;
         padding: 20px;
     }
 
     .contain p {
         font-size: 14px;
     }
+
+    .contain input, .contain button {
+        padding: 8px;
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 576px) {
     .contain {
-        width: 95%;
+        padding: 15px;
     }
 
     .contain p {
-        font-size: 13px;
+        font-size: 14px;
+    }
+
+    .contain input, .contain button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+/* Additional styles for larger screens (laptops, desktops) */
+@media (min-width: 769px) {
+    .contain {
+        margin: 10px;
+        padding: 25px 35px;
+        position: absolute;
+        background-color: rgb(245, 235, 212);
+        width: 500px;
+        border-radius: 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid rgb(132, 161, 235);
+    }
+
+    .contain p {
+        margin: 8px;
+        font-size: 15px;
+    }
+
+    .contain input {
+        width: 100%;
+        height: 50px;
+        border: 1px solid black;
+        outline: 0;
+        padding: 10px;
+        margin: 10px 0 20px;
+        border-radius: 5px;
+    }
+
+    .contain button {
+        border-radius: 10px;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    #QR {
+        text-align: center;
+        color: rgb(80, 176, 228);
+        text-shadow: 2px;
+        font-size: 18px;
+        height: 50px;
     }
 }
